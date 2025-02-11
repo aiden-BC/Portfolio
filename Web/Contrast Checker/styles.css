@@ -1,0 +1,255 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif; /* Fuente Trebuchet MS */
+    font-size: 25; /* Tamaño de fuente más grande */
+    background-color: #FFFFFC; /* Fondo */
+}
+
+header{
+    text-align: center;
+    padding-top: 1%;
+}
+
+.linea{
+    border: none;
+    height: 2px;
+    background-color: #D2D2CF;
+}
+
+.izq{
+    display: block;
+    width: 45%;
+}
+
+.der{
+    display: block;
+    width: 45%;
+}
+
+.contenedor-general{
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    height: 50%;
+    margin: 0px auto; /* Margen exterior y centrado horizontal */
+    margin-top: 3%;
+    max-width: calc(100% - 50px); /* Ancho máximo relativo al tamaño de la pantalla */
+}
+
+.contenedor-texto{
+    display:block;
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    background-color: #F1F1EF;
+    width: 90%;
+    height: fit-content;
+    padding: 20px; /* Espaciado interno */
+    border-radius: 30px; /* Radio de las esquinas redondeadas */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-img{
+    display:flex;
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    padding-left: 4px;
+}
+
+.contenedor-izq{
+    display: block;
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    background-color: #F1F1EF;
+    width: 100%;
+    padding: 20px; /* Espaciado interno */
+    border-radius: 30px; /* Radio de las esquinas redondeadas */
+}
+
+.contenedor-der{
+    display: block;
+    width: 100%;
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    border-radius: 30px; /* Radio de las esquinas redondeadas */
+}
+
+.contenedor-in{
+    display: flex;
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    width: 95%;
+    height: auto;
+    padding-left: 20px; /* Espaciado interno */
+    border-radius: 30px; /* Radio de las esquinas redondeadas */
+    align-items: center;
+}
+
+.cajaRatio{
+    display: flex;
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    
+    background-color: transparent;
+    align-items: center; /* Alinea verticalmente los elementos */
+    width: 45%;
+    height: 100%;
+    padding: 20px; /* Espaciado interno */
+
+}
+
+#ratio{
+    flex-direction: column;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    background-color: #FFFFFC; /* Fondo */
+    border-radius: 20px; /* Radio de las esquinas redondeadas */
+    padding: 10px; /* Espaciado interno */
+    height: 40%;
+    width: 25%;
+    margin-left: 3%;
+}
+
+.img-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 30px; /* Diámetro del círculo */
+    height: 30px; /* Diámetro del círculo */
+    border-radius: 50%; /* Hace que el cuadro sea un círculo */
+    border: solid 1px black;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.boton button, .boton-eliminar button{
+    padding: 5px 5px;
+    border:  2px solid #D2D2CF; /* Sin borde */
+    width: 40px; /* Ancho del contenedor */
+    height: 40px; /* Altura del contenedor */
+    background-color: #D2D2CF; /* Color del círculo (en este caso rojo) */
+    border-radius: 50%; /* Hace que el cuadro sea un círculo */
+    font-size: 16px; /* Tamaño del texto del botón */
+    font-weight: bold; /* Texto en negrita */
+    display: flex; /* Usamos flexbox */
+    justify-content: center; /* Alineamos horizontalmente al centro */
+    align-items: center; /* Alineamos verticalmente al centro */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+
+}
+
+.boton img {
+    max-width: 80%; /* Asegura que la imagen no supere el ancho del contenedor */
+    max-height: 80%; /* Asegura que la imagen no supere la altura del contenedor */
+}
+
+#boton-aceptar, #boton-archivo{
+    padding: 10px 30px; /* Espaciado interno del botón */
+    width: fit-content; /* Ancho del contenedor */
+    background-color: #D2D2CF; /* Color de fondo del botón */
+    border: 2px solid #D2D2CF; /* Sin borde */; /* Sin borde */
+    border-radius: 20px; /* Radio de las esquinas redondeadas */
+    color: black; /* Color del texto del botón */
+    font-size: 16px; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#boton-eliminar-todo, #boton-eliminar-img{
+    padding: 10px 30px; /* Espaciado interno del botón */
+    width: fit-content; /* Ancho del contenedor */
+    height: fit-content;
+    color: #FFFFFC; /* Color de fondo del botón */
+    background-color: #E40101;
+    border: none; /* Sin borde */
+    border-radius: 30px;
+    font-size: 15px; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.boton button:hover, .boton-eliminar button:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombreado ligero al pasar el ratón */
+    transform: scale(1.05); /* Aumenta el tamaño en un 5% */
+}
+
+.boton button:active, #boton-aceptar:active {
+    filter: invert(100%);
+}
+
+#boton-eliminar-todo:active{
+    background-color: #FFFFFC; /* Color de fondo del botón */
+    color: #E40101;
+}
+
+input[type="text"]{
+    background: #FFFFFC;
+    border: none;
+    border-radius: 30px; /* Radio de las esquinas redondeadas */
+    font-size: medium;
+    width: 50%;
+    height: 100%;
+}
+
+#textInput{
+    width: 100%;
+}
+
+.muestra-color{
+    height: 110px;
+    width: 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.color-paleta{
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Alinear elementos en columna */
+    align-items: center; /* Alinear horizontalmente al centro */
+    font-weight: bold;
+    margin-right: 45px;
+    height: 200px;
+}
+
+.color-paleta img{
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.color-paleta img:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombreado ligero al pasar el ratón */
+    transform: scale(1.2); /* Aumenta el tamaño en un 5% */
+}
+
+#paleta{
+    display: flex;
+    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan */
+    padding-left: 10px; /* Espaciado interno */
+    border-radius: 30px; /* Radio de las esquinas redondeadas */
+    overflow-x: auto; /* Agregar desplazamiento horizontal si los elementos no caben en la pantalla */
+}
+
+.color-contraste{
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    width: 85%;
+    height: 40px;
+    padding: 10px; /* Espacio interno */
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.color-contraste p{
+    flex-grow: 1; /* Permite que el texto ocupe todo el espacio disponible */
+    text-align: center; /* Centra el texto */
+}
+
+#contador{
+    text-align: right;
+    padding-right: 5%;
+}

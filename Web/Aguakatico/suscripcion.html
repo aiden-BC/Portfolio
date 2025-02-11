@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción</title>
+    <link rel="stylesheet" href="css/susc.css">
+    <script src="js/susc.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <img id="logo" src="imgs/Aguacatiko.png" width="350" height="150">
+    </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <ul>
+            <li><a href="pag_principal.html">INICIO</a></li>
+            <li class="dropdown">
+                <a href="tienda.html" class="dropbtn">TIENDA</a>
+                <div class="dropdown-content">
+                    <a href="tienda_libros.html">Libros</a>
+                    <a href="tienda_utensilios.html">Utensilios</a>
+                    <a href="tienda_ingredientes.html">Ingredientes</a>
+                </div>
+            </li>
+            <li><a href="enviar_receta.html">ENVÍO DE RECETAS</a></li>
+            <li><a href="suscripcion.html">SUSCRIPCIÓN</a></li>
+            <li><a href="conocenos.html"><u>Conócenos</u></a></li>
+        </ul>
+    </nav><br>
+
+    <!-- FORMULARIO -->
+    <h3><b>SUSCRÍBETE A NUESTRO BLOG</b></h3>
+
+    <form name="suscripcion" autocomplete="off">
+        <div>
+            <label for="nombre">Nombre*: </label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <br><label for="fecha">Fecha de nacimiento: </label>
+            <input type="date" id="fecha" name="fecha">
+
+            <br><label for="correo">Correo*: </label>
+            <input type="correo" id="correo" name="correo" required>
+
+            <br><label for="tlf">Número de teléfono: </label>
+            <input type="tel" id="tlf" name="tlf">
+
+            <br><label for="contraseña">Contraseña*: </label>
+            <input type="password" id="pass" name="pass" required>
+        </div>
+        
+        <div class="opciones">
+            <label for="recetas">¿Qué tipo de recetas te interesan?</label><br>
+        
+            <input type="checkbox" id="postres" name="recetas" value="receta_postres">
+            <label for="postres">Postres</label><br>
+
+            <input type="checkbox" id="vegana" name="recetas" value="receta_vegana">
+            <label for="vegana">Recetas Veganas</label><br>
+
+            <input type="checkbox" id="italiana" name="recetas" value="comida_italia">
+            <label for="postres">Comida Italiana</label><br>
+
+            <input type="checkbox" id="fitness" name="recetas" value="comida_fit">
+            <label for="fitness">Comida Fitness</label><br>
+        </div>
+
+        <div class="opciones">
+            <label for="notif">¿Quieres recibir notificaciones nuestras al correo?</label><br>
+
+            <input type="radio" id="si" name="notifs" value="si">
+            <label for="si">Sí</label>
+
+            <input type="radio" id="no" name="notifs" value="no">
+            <label for="no">No</label>
+        </div>
+
+        <div>
+            <label for="nivel">¿Qué nivel de cocina tienes según nuestro filtro?</label>
+            
+            <br>
+            <select name="nvl" id="nivel" style="width: 160px;">
+                <option></option>
+                <option>Fácil &#128994</option>
+                <option>Medio &#128992</option>
+                <option>Difícil &#128308</option>
+            </select>
+            <br>
+        </div>
+        
+        <div class="boton">
+            <input type="submit" value="ENVIAR" onclick="alerta()">
+        </div>
+        
+    </form>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <div id="pie">
+                <img id="logo" src="imgs/Aguacatiko.png" width="230" height="100">
+            </div>
+            <div>
+                <p><a href="https://www.iubenda.com/es/help/37616-que-son-los-terminos-y-condiciones-y-para-que-sirven#:~:text=Las%20Condiciones%20de%20servicio%20establecen,para%20protegerlo%20de%20posibles%20responsabilidades."><small>Condiciones de Servicio | Privacidad | Política de Contenidos</small></a></p>
+            </div>
+        </div>
+        <div>
+            <h5>CONTACTO</h5>
+
+            <ul>
+                <li type="point">Correo: <a href="https://www.google.com/intl/es/gmail/about/">aguacatiko@gmail.com</a></li>
+                <li type="point">Teléfono: +34 111 222 333</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

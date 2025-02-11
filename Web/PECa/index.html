@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PECa</title>
+  <!-- Agregar el logo al título de la pestaña -->
+  <link rel="icon" href="imagenes/logo_pec.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="historia.js"></script>
+
+</head>
+<body>
+  <header>
+    <img src="imagenes/logo_pec.png" alt="Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a onclick="redireccionar('index.html')">Modulador</a></li>
+        <li><a onclick="redireccionar('equipo.html')">¿Qué somos?</a></li>
+        <li><a onclick="redireccionar('historia.html')">Historia</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<div class="contenedor">
+  <div class="col-70">
+    <div style="text-align: center; font-weight: bold;">Modulación</div>
+    <p></p>
+    <div class="rectangulo">
+      audio.wav
+      <div class="rectangulo2" id="botonSubirArchivo">Subir archivo</div>
+    </div>
+    <div class="rectangulo3">
+      <div>
+        <!-- Botón de Empezar -->
+        <button class="boton empezar">Empezar</button>
+        <!-- Botón de Detener -->
+        <button class="boton detener">Detener</button>
+      </div>
+
+      <!-- Pitch -->
+      <label class="casilla-verificacion">
+        <input type="checkbox" id="pitch">
+        <span class="checkmark"> </span>Mantener Pitch
+        <span class="tooltip">
+          <i class="fas fa-question-circle"></i>
+          <span class="tooltiptext">
+            Realiza una operación de time-stretching para mantener el pitch original aunque se modifique la velocidad de reproducción.
+            <br>Para más información haz
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/preservesPitch" target="_blank">click aquí</a>
+          </span>
+        </span>
+      </label>
+
+      <div class="contenedorpeq">
+        <div class="col-50">
+          <p>Velocidad de reproducción</p>
+          <div class="barra-desplazamiento">
+            <input type="range" min="0.01" max="2" step="0.005" value="1" class="slider" id="pitchSlider">
+            <div class="numero-barra" id="pitchValor">1</div>
+          </div>
+        </div> 
+      </div>
+
+      <!-- Vibrato -->
+      <label class="casilla-verificacion">
+        <input type="checkbox" class="checkbox-input" id="Vibrato">
+        <span class="checkmark"></span>Vibrato
+        <span class="tooltip">
+          <i class="fas fa-question-circle"></i>
+          <span class="tooltiptext">
+            El vibrato es una variación (casi) periódica del pitch de un tono aplicando un retardo variable al sonido original. 
+            Está caractarizado por un oscilador de baja frecuencia y la profundidad del oscilador.
+            <br>Para más información haz
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode" target="_blank">click aquí</a>
+          </span>
+        </span>
+      </label> 
+      <div class="contenedorpeq">
+          <div class="col-50">
+              Frecuencia modulación
+              <p></p>
+              <input type="range" min="0" max="10" step="0.05" value="5" class="slider" id="frecuenciaModulacionSliderVibrato">
+              <div class="numero-barra" id="frecuenciaModulacionValorVibrato">5</div>
+          </div>
+          <div class="col-50">
+              Profundidad modulación
+              <p></p>
+              <input type="range" min="0" max="0.1" step="0.001" value="0.01" class="slider" id="amplitudModulacionSliderVibrato">
+              <div class="numero-barra" id="amplitudModulacionValorVibrato">0.01</div>
+          </div>
+      </div>
+        
+      <!-- Filtro paso banda -->
+      <label class="casilla-verificacion">
+        <input type="checkbox" class="checkbox-input" id="paso-banda">
+        <span class="checkmark"> </span>Filtro paso banda
+        <span class="tooltip">
+          <i class="fas fa-question-circle"></i>
+          <span class="tooltiptext">
+            Un filtro paso banda permite el paso de frecuencias dentro de una banda específica limitada por una frecuencia superior e inferior, y atenúa las que se encuentren fuera de esa banda.
+            <br>Para más información haz
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode" target="_blank">click aquí</a>
+          </span>
+        </span>
+        
+      </label>
+
+      <div class="contenedorpeq">
+        <div class="col-50">
+          <p>Límite inferior:</p>
+          <div class="barra-desplazamiento">
+            <input type="range" min="10" max="5000" value="10" class="slider" id="limiteInferiorSlider">
+            <div class="numero-barra" id="limiteInferiorValor">10</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenedorpeq">
+        <div class="col-50">
+          <p>Límite superior:</p>
+          <div class="barra-desplazamiento">
+            <input type="range" min="20" max="5000" value="5000" class="slider" id="limiteSuperiorSlider">
+            <div class="numero-barra" id="limiteSuperiorValor">5000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eco -->
+      <label class="casilla-verificacion">
+        <input type="checkbox" class="checkbox-input" id="eco">
+        <span class="checkmark"> </span>Eco     
+        <span class="tooltip">
+          <i class="fas fa-question-circle"></i>
+          <span class="tooltiptext">
+            El eco se debe a la reflexión de un sonido en superficies, creando repeticiones retardadas que imitan el rebote del sonido en un entorno físico. 
+            <br>Para más información haz
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode" target="_blank">click aquí</a>
+          </span>
+        </span>
+      </label> 
+      <div class="contenedorpeq">
+        <div class="col-50">
+          Retardo
+          <p></p>
+          <input type="range" min="0" max="1" step="0.05" value="0.5" class="slider" id="retardoSlider">
+          <div class="numero-barra" id="retardoValor">0.5</div>
+        </div>
+        <div class="col-50">
+          Amplitud
+          <p></p>
+          <input type="range" min="0" max="1" step="0.05" value="0.5" class="slider" id="amplitudSlider">
+          <div class="numero-barra" id="amplitudValor">0.5</div>
+        </div>
+      </div>
+
+      <!-- Trémolo -->
+      <label class="casilla-verificacion">
+        <input type="checkbox" class="checkbox-input" id="Tremolo">
+        <span class="checkmark"> </span>Trémolo
+        <span class="tooltip">
+          <i class="fas fa-question-circle"></i>
+          <span class="tooltiptext">
+            El tremolo es una modulacion de la amplitud de la señal de audio en el tiempo, creando una variación periódica en el volumen que resulta en un sonido pulsante o vibrante.
+            <br>Para más información haz
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode" target="_blank">click aquí</a>
+          </span>
+        </span>
+      </label> 
+
+      <div class="contenedorpeq">
+        <div class="col-50">
+          Frecuencia modulación
+          <p></p>
+          <input type="range" min="0" max="20" step="0.005" value="5" class="slider" id="frecuenciaModulacionSlider">
+          <div class="numero-barra" id="frecuenciaModulacionValor">5</div>
+        </div>
+        <div class="col-50">
+          Amplitud modulación
+          <p></p>
+          <input type="range" min="0" max="1" step="0.005" value="0.1" class="slider" id="amplitudModulacionSlider">
+          <div class="numero-barra" id="amplitudModulacionValor">0.1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-30">
+    <div style="text-align: center; font-weight: bold;">Efectos 
+      <span class="tooltip" style="font-size: medium; font-weight: lighter;">
+        <i class="fas fa-question-circle"></i>
+        <span class="tooltiptext">
+          Aplica un efecto al audio mediante la convolución con un arhcivo que contiene la respuesta al impulso que causa el efecto deseado.
+          <br>Para más información haz
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode" target="_blank">click aquí</a>
+        </span>
+      </span>
+    </div>
+    <p></p>
+    <div class="rectangulo3">
+      <!-- Backwards -->
+      <label class="casilla-verificacion">
+      <input type="checkbox" class="checkbox-input" id="backwards">
+      <span class="checkmark"> </span>Backwards</label>
+      <div></div>
+
+      <!-- Chorus -->
+      <label class="casilla-verificacion">
+      <input type="checkbox" class="checkbox-input" id="chorus">
+      <span class="checkmark"> </span>Chorus</label>
+      <div></div>
+
+      <!-- Reverb -->
+      <label class="casilla-verificacion">
+      <input type="checkbox" class="checkbox-input" id="reverb">
+      <span class="checkmark"> </span>Reverb</label>
+      <div></div>
+
+      <!-- Robot -->
+      <label class="casilla-verificacion">
+      <input type="checkbox" class="checkbox-input" id="robot">
+      <span class="checkmark"> </span>Robot</label>
+      <div></div>
+
+      <!-- Telephone -->
+      <label class="casilla-verificacion">
+      <input type="checkbox" class="checkbox-input" id="telephone">
+      <span class="checkmark"> </span>Telephone</label>
+      <div></div>
+
+      <!-- Wild Echo -->
+      <label class="casilla-verificacion">
+      <input type="checkbox" class="checkbox-input" id="wildecho">
+      <span class="checkmark"> </span>Wild Echo</label>
+      <div></div>
+
+    </div>
+  </div>
+</div>
+<br>
+<footer>
+  <img src="imagenes/logo_pec.png" alt="Logo" class="logo"> <!-- Aquí se agrega el logo -->
+
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>Contacto</h3>
+      <p style="  font-size: 20px; /* Tamaño de letra más pequeño */
+      ">Dirección: 123 Calle del Sonido, Ciudad de la Música</p>
+      <p style="  font-size: 20px; /* Tamaño de letra más pequeño */
+      ">Teléfono: +123456789</p>
+      <p style="  font-size: 20px; /* Tamaño de letra más pequeño */
+      ">Email: info@audio.com</p>
+    </div>
+    <div class="footer-right">
+      <h3>Síguenos</h3>
+        <div class="redes-sociales">
+          <a href="https://www.instagram.com/asupvteam/?hl=es" class="red-social" target="_blank">
+            <img src="imagenes/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/company/aero-design-upv/?originalSubdomain=es" class="red-social" target="_blank">
+            <img src="imagenes/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2024 Página de Procesamiento de Efectos de Audio | Todos los derechos reservados
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

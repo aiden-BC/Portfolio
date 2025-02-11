@@ -1,0 +1,71 @@
+/*TIPOGRAFIA*/
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* PÁGINA ENTERA */
+body{
+    background-color: #f5f5f5;
+}
+/*enlaces*/
+a:hover {color:  #d5c6dc;}
+
+/* HEADER */
+header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: left;
+}
+
+/* BARRA DE NAVEGACIÓN */
+nav ul {list-style-type: none; margin: 0; padding: 0; overflow:hidden; background-color: #572975; border-radius: 8px;}
+nav li {float: left;}
+nav li:last-child {float: right;}
+nav li a, .dropbtn {display: inline-block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;}
+nav li a:hover, .dropdown:hover, .dropbtn:hover {background-color: #d5c6dc; border-radius: 8px; color: black;}
+li.dropdown {display: inline-block;}
+
+/* menu tienda */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1b003a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1; color: black;}
+.dropdown:hover .dropdown-content {display: block;}
+
+/* FORMULARIO */
+h3{margin-left: 20px;margin-top: 0;}
+
+form input, form select{
+    margin-top: 3px;
+    background-color:#d5c6dc;
+    border: #815c97 solid 1px;
+    border-radius: 5px;
+    accent-color: #815c97;
+}
+form div{margin-left: 20px;margin-bottom: 40px;margin-top: 10px;}
+.opciones input{margin-left: 30px; }
+.boton input{
+    color: white;
+    background-color: #572975;
+    border: #572975; 
+}
+h3{
+    font-family: "Kaushan Script", cursive;
+    color: #1b003a;
+}
+
+/* FOOTER */
+#pie {display: flex; justify-content: center; font-family: "Kaushan Script", cursive;}
+footer { margin-top: 50px; background-color:#ab90b9; display:flex; justify-content: space-around; align-items: center; border:solid #1b003a 5px}
+footer>div:nth-child(1) {padding-top: 50px; text-align: center; border-right: solid #1b003a 2px ; padding-right: 200px; margin-top: 5px; margin-bottom: 5px; align-items: center;}

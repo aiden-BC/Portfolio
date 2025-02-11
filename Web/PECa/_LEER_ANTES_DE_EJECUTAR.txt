@@ -1,0 +1,12 @@
+PECa
+===================
+
+Descripción
+-----------
+Página web para modulación de audio.
+
+Ejecución
+-----------
+- Ejecutar el archivo EJECUTA_ESTO.bat
+- Se abrirá la página web en un servidor local
+- Mantener abierta la ventana de CMD que se abrirá hasta haber terminado de utilizar la página

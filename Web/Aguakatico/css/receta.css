@@ -1,0 +1,85 @@
+/*TIPOGRAFIA*/
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* PÁGINA ENTERA */
+body {
+    background-color: #F5F5F5;
+}
+/*enlaces*/
+a {color: #1b003a;}
+a:hover {color:  #d5c6dc;}
+
+/* HEADER */
+header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: left;
+    font-family: "Kaushan Script", cursive;
+    color: #1b003a;
+}
+
+/* BARRA DE NAVEGACIÓN */
+nav ul {list-style-type: none; margin: 0; padding: 0; overflow:hidden; background-color: #572975; border-radius: 8px;}
+nav li {float: left;}
+nav li:last-child {float: right;}
+nav li a, .dropbtn {display: inline-block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;}
+nav li a:hover, .dropdown:hover, .dropbtn:hover {background-color: #d5c6dc; border-radius: 8px; color: black;}
+li.dropdown {display: inline-block;}
+
+/*menu tienda*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1b003a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;}
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;}
+.dropdown-content a:hover {background-color: #d5c6dc; color: black;}
+.dropdown:hover .dropdown-content {display: block;}
+
+/*RECETA*/
+/*titulo*/
+#titulo>div>img {padding-top:10px; padding-bottom:10px; float:right;}
+
+#titulo{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Kaushan Script";
+    color: #1b003a;
+    padding-top: 15px;
+}
+
+/*div del video+tabla*/
+#parte1, #receta {margin-left:10px; margin-right:10px;}
+#parte1 {display: flex; justify-content: space-between; align-items: center;}
+
+/*video*/
+#video {border: dotted #572975 2px; padding: 3px;}
+
+/*ingredientes*/
+table, td {border: 1px solid #572975;}
+table {width: 45%; border-collapse: collapse; background-color: #ab90b9;}
+#ingredientes {height: 30%;}
+tr {height: 30px;}
+td:nth-child(2) {text-align: center;}
+td:nth-child(1) {padding-left: 15px;}
+
+/*receta paso a paso*/
+h2 {font-family: "Kaushan Script"; color: #1b003a;}
+#img1 {float:right; padding:10px;}
+#img2 {float:left; padding:10px;}
+p {text-align: justify;}
+p:last-child {text-align: center; clear:both; color: #572975;}
+#receta>h2 {text-align: center;}
+
+/* FOOTER */
+#pie {display: flex; justify-content: center; font-family: "Kaushan Script", cursive;}
+footer { margin-top: 50px; background-color:#ab90b9; display:flex; justify-content: space-around; align-items: center; border:solid #1b003a 5px}
+footer>div:nth-child(1) {padding-top: 50px; text-align: center; border-right: solid #1b003a 2px ; padding-right: 200px; margin-top: 5px; margin-bottom: 5px; align-items: center;}

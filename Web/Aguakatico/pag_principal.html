@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Aguacatiko</title>
+    <link rel="stylesheet" href="css/css_pag_principal.css">
+    <script src="js/pag_principal.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <img id="logo" src="imgs/Aguacatikolema.png" width="380" height="180">
+    </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <ul>
+            <li><a href="pag_principal.html">INICIO</a></li>
+            <li class="dropdown">
+                <a href="tienda.html" class="dropbtn">TIENDA</a>
+                <div class="dropdown-content">
+                    <a href="tienda_libros.html">Libros</a>
+                    <a href="tienda_utensilios.html">Utensilios</a>
+                    <a href="tienda_ingredientes.html">Ingredientes</a>
+                </div>
+            </li>
+            <li><a href="enviar_receta.html">ENVÍO DE RECETAS</a></li>
+            <li><a href="suscripcion.html">SUSCRIPCIÓN</a></li>
+            <li><a href="conocenos.html"><u>Conócenos</u></a></li>
+        </ul>
+    </nav><br>
+    
+    <div>
+        <!-- RECETAS -->
+        <section>
+            <article class="receta" id="macarrones">
+                <img style="margin-right: 10px;" src="imgs/macarrones.jpg" width="145" length="109" onclick="abrir_macarrones()">
+                <p class="facil">
+                    <span><b>Macarrones</b></span><br>
+                    Los macarrones a la boloñesa son un delicioso plato italiano acompañado de la muy sabrosa salsa. Esta salsa
+                    es típica de las comarcas cercanas a Bolonia, ciudad del norte de Italia, donde las pastas son el plato estrella.<br>
+                    ¡Con este plato seguro que no fallas, a todo el mundo le encanta!
+                </p>
+                <div><img src="imgs/Aguacateverde.png" width="30" length="30"></div>
+            </article>
+            <article class="receta" style="flex-direction: row-reverse;">
+                <img src="imgs/sushi.jpg" width="145" length="109" onclick="abrir_sushi()">
+                <p class="dificil">
+                    <span><b>Sushi</b></span><br>
+                    El sushi es uno de las platos más reconocidos de la gastronomía japonesa, reconocido internacionalmente y en creciente popularidad
+                     entre los jovenes. <br>
+                     ¡El sushi es un plato muy rico y saludable perfecto para acompañar una comida la gente que quieres!
+                </p>
+                <div><img src="imgs/Aguacaterojito.png" width="30" length="30"></div>
+            </article>
+            <article class="receta">
+                <img style="margin-right: 10px;" src="imgs/red_velvet.jpg" width="145" length="109" onclick="abrir_redvelvet()">
+                <p class="media">
+                    <span><b>Red Velvet</b></span><br>
+                    De origen desconocido, la misteriosa tarta Red Velvet es un famoso postre que actualmente inunda pastelerías y cafeterías de todo el mundo.
+                    <br> Hoy podrás hacer esta deliciosa tarta en tu propipa casa, ¿te animas?
+                </p>
+                <div><img src="imgs/Aguacatenaranja.png" width="30" length="30"></div>
+            </article>
+        </section>
+    
+        <!-- ASIDE -->
+        <aside>
+            <form>
+                <input type="search" id="search" placeholder="Buscar receta..." onkeyup="buscar()">
+            </form>
+            <p onclick="mostrar_recetas()"><b>Nuestras recetas más populares</b></p>
+            <div id="recetas_populares_padre" style="display: none;">
+                <ul id="recetas_populares">
+                    <li><a href="receta3.html">Red Velvet</a></li>
+                    <li><a href="receta1.html">Macarrones</a></li>
+                    <li><a href="receta2.html">Sushi</a></li>
+                </ul>
+            </div>
+            <p style="margin-bottom: 0px;"><b>Filtrar recetas</b></p>
+
+            <div onclick="filtrar_facil()">
+                <img src="imgs/Aguacateverde.png" width="30px" height="30px">
+                <p>Fácil</p>
+            </div>
+            <div onclick="filtrar_media()">
+                <img src="imgs/Aguacatenaranja.png" width="30px" height="30px">
+                <p>Medio</p>
+            </div>
+            <div onclick="filtrar_dificil()">
+                <img src="imgs/Aguacaterojito.png" width="30px" length="30px">
+                <p>Difícil</p>
+            </div> 
+            <div>
+                <button onclick="quitar_filtro()">Borrar filtros</button>
+            </div>
+        </aside>
+
+    </div>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <div>
+                <img id="twitter" src="imgs/twitter.png" width="60" length="60" onclick="twitter()">
+                <img src="imgs/tik_tok.png" width="60" length="60" onclick="tiktok()">
+                <img src="imgs/insta.png" width="60" length="60" onclick="insta()">
+                <img src="imgs/fbook.png" width="78" length="78" onclick="facebook()">
+            </div>
+
+            <div>
+                <p>-Algunos de nuestros premios</p>
+                <img src="imgs/concurso1.png" width="78" length="78">
+                <img src="imgs/consurso2.png" width="78" length="78">
+                <p>-</p>
+            </div>
+
+            <div>
+                <a style="border-right:1px solid black ;padding-right: 15px;" href="https://policies.google.com/terms?hl=es-419" target="_blank">Condiciones de servicio</a>
+                <a style="border-right:1px solid black ;padding-right: 15px;" href="https://policies.google.com/privacy?hl=es" target="_blank">Privacidad</a>
+                <a href="https://support.google.com/adspolicy/answer/6008942?hl=es-419 " target="_blank">Política de contenidos</a>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h5>CONTACTO</h5>
+                <ul>
+                    <li type="point">Correo: <a href="https://www.google.com/intl/es/gmail/about/" target="_blank">aguacatiko@gmail.com</a></li>
+                    <li type="point">Teléfono: +34 111 222 333</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Comunidad y ayuda</h5>
+                <ul>
+                    <li><a href="https://support.google.com/?hl=es" target="_blank">Centro de ayuda </a></li>
+                    <li><a href="https://foro.infojardin.com/threads/aguacatero.139290/" target="_blank">Foros </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <br>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrast Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo_header.png" class="logo" height="100">
+        <hr class="linea">
+    </header>
+    <div class="contenedor-general">
+        <div class="izq">
+            <div class="contenedor-izq">
+                <div class="contenedor-in">
+                    <h2>Añade colores:</h2>
+                
+                    <div class="input">
+                        <input type="text" class="texto" id="colorInput" value="#5271FF" autocomplete="off">
+                        <div class="circle" id="circle"></div>
+                    </div>      
+                    
+                    <div class="boton">
+                        <button id="cuentagotas">
+                            <input style="border: none;width: 1px;height: 1px;visibility: hidden;"autocomplete="off">
+                            <img src="imagenes/colorpicker.png">
+                            <input type="color" id="boton-colorpicker" value="#5271FF" style="border: none;width: 1px;height: 1px;visibility: hidden;"autocomplete="off">
+                        </button>
+                    </div>
+                    
+                    <div class="boton">
+                        <button id="boton-add">+</button>
+                    </div>
+                    <div class="boton">
+                        <button id="boton-aceptar">Aceptar</button>
+                    </div>
+                </div>
+                <div id="paleta"></div>
+                <div class="contenedor-in" style="margin-top: 10px;">
+                    <div class="boton-eliminar">
+                        <button id="boton-eliminar-todo">Eliminar Todo</button>
+                    </div>
+                </div>
+            </div>
+            <div id="ratio"></div>
+        </div>
+        
+        <div class="der">
+            <div class="contenedor-texto">
+                <h2>Texto:</h2>
+                <div class="input" style="width: 90%;">
+                    <input type="text" id="textInput" maxlength="30" value="Texto de ejemplo" autocomplete="off" oninput="actualizarContador()">
+                </div>
+                <p id="contador">0/30</p>
+            </div>
+            <div class="contenedor-texto">
+                <div class="contenedor-img">
+                    <h2>Importar imagen:</h2>
+                    <div class="boton">
+                        <button id="boton-archivo">
+                            Subir archivo
+                        </button>
+                    </div>
+                </div>
+                <div class="img-input">
+                </div>
+                <div class="boton-eliminar" style="margin-top: 20px;">
+                    <button id="boton-eliminar-img">Eliminar Imagen</button>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

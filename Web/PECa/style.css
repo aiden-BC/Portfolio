@@ -1,0 +1,379 @@
+  /* Estilos generales para el cuerpo de la página */
+  body {
+    margin: 0;
+    font-family: 'Trebuchet MS', Arial, sans-serif; /* Fuente Trebuchet MS */
+    font-size: 24px; /* Tamaño de fuente más grande */
+    background-color: #FFC5EB; /* Fondo rosa */
+  }
+
+  /* Estilos para el encabezado con imagen */
+  header {
+    background-color: #FFC5EB; /* Fondo rosa */
+    padding: 20px 0; /* Espaciado interno arriba y abajo */
+    text-align: center; /* Centrar contenido */
+  }
+
+  /* Estilos para la imagen */
+  .logo {
+    max-width: 10%; /* Ancho máximo */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-bottom: 10px; /* Margen inferior reducido */
+    transition: box-shadow; /* Transición suave para el sombreado */
+  }
+
+  /* Estilos para los contenedores */
+  .contenedor {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    margin: 0px auto; /* Margen exterior y centrado horizontal */
+    max-width: calc(100% - 50px); /* Ancho máximo relativo al tamaño de la pantalla */
+  }
+  .contenedorpeq {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    max-width: 1000px; /* Ancho máximo */
+  }
+  /* Estilos para los contenedores de colores */
+  .col-70 {
+    width: 70%; /* Ancho del 70% */
+    background-color: #FFEDF9; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    color: #FE02A6; /* Color del texto en rosa */
+  }
+
+  .col-30 {
+    width: 30%; /* Ancho del 30% */
+    background-color: #FFEDF9; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    margin-left: 10px; /* Margen izquierdo para crear espacio */
+    color: #FE02A6;
+  }
+  .col-50 {
+    width: 50%; /* Ancho del 50% */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  /* Estilos para el rectángulo con bordes redondeados */
+  .rectangulo {
+    width: 50%; /* Ancho del 30% */
+    background-color: #FFFFFF; /* Color de fondo blanco */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    color: #646874; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 20px; /* Margen superior */
+    position: relative; /* Posición relativa */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el rectángulo */
+  }
+  /* Estilos para el rectángulo secundario */
+  .rectangulo2 {
+    position: absolute; /* Posición absoluta para superponer */
+    bottom: 10px; /* Distancia desde abajo */
+    right: 10px; /* Distancia desde la derecha */
+    background-color: #FFEDF9; /* Color de fondo */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 10px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #FE02A6;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+  }
+  .rectangulo3 {
+    background-color: #FFFFFF; /* Color de fondo blanco */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    color: #646874; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 20px; /* Margen superior */
+    position: relative; /* Posición relativa */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el rectángulo */
+  }
+
+  /* Estilos al pasar el ratón por encima */
+  .rectangulo2:hover {
+    background-color: #FE02A6; /* Cambio de color al pasar el ratón */
+    color: #FFFFFF; /* Cambio de color del texto al pasar el ratón */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombreado ligero al pasar el ratón */
+  }
+  .boton {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: -5px; /* Margen negativo para el efecto de pegado */
+    font-family: 'Trebuchet MS';
+    font-size: 16px; 
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Estilos para el botón de empezar */
+  .empezar {
+    border-top-left-radius: 20px; /* Borde redondeado arriba-izquierda */
+    border-bottom-left-radius: 20px; /* Borde redondeado abajo-izquierda */
+    background-color: #FFEDF9;
+    color: #FE02A6;
+  }
+
+  /* Estilos para el botón de detener */
+  .detener {
+    border-top-right-radius: 20px; /* Borde redondeado arriba-derecha */
+    border-bottom-right-radius: 20px; /* Borde redondeado abajo-derecha */
+    background-color: #FFEDF9;
+    color: #FE02A6;
+  }
+  
+  /* Estilos al pasar el ratón por encima */
+  .boton:hover {
+    background-color: #FE02A6; /* Cambio de color al pasar el ratón */
+    color: #FFFFFF; /* Cambio de color del texto al pasar el ratón */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombreado ligero al pasar el ratón */
+  }
+
+  /* Estilos para la casilla de verificación */
+  .casilla-verificacion {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; /* Espacio a la izquierda de la casilla */
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #FE02A6;
+  }
+
+  .checkbox-input, #pitch {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Estilo del tick (checkmark) */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #FFEDF9;
+    border-radius: 5px;
+    border: 1px solid #FE02A6;
+  }
+
+  /* Mostrar el tick cuando la casilla está marcada */
+  .checkbox-input:checked ~ .checkmark, #pitch:checked ~ .checkmark {
+    background-color: #FE02A6;
+  }
+
+  /* Estilo del tick (checkmark) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Mostrar el tick dentro de la casilla */
+  .checkbox-input:checked ~ .checkmark:after,#pitch:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Estilos del tick */
+  .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+  /* Estilos para el número de la barra */
+  .numero-barra {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+ /* Estilos para la barra de navegación */
+nav {
+    background-color: #FFC5EB;
+    padding: 5px 0;
+    text-align: center;
+    
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 50px;
+  }
+  nav ul li a {
+    color: #FE02A6;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 10px; /* Agregado para crear el efecto hover */
+    border-radius: 5px; /* Agregado para crear el efecto hover */
+    transition: box-shadow 0.3s; /* Transición suave para el sombreado */
+  }
+  nav ul li a:hover {
+    color: white; /* Cambiado el color al pasar el mouse */
+    background-color: #FE02A6; /* Cambiado el fondo al pasar el mouse */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombreado al pasar el mouse */
+  } 
+
+/* Estilo para el fondo del slider */
+.slider {
+  -webkit-appearance: none;/* Eliminar el estilo predeterminado del navegador */
+  appearance: none;
+  width: 100%; /* Ancho del slider */
+  height: 7px;
+  background-color: #FFEDF9; /* Color de fondo del slider */
+  border-radius: 10px; 
+  cursor: pointer; 
+  margin-left: auto; 
+  /*overflow: hidden;*/
+}
+
+/* Estilo para el indicador del slider */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;/* Eliminar el estilo predeterminado del navegador */
+  appearance: none;
+  width: 13px; 
+  height: 13px;
+  background-color: #FE02A6; 
+  border-radius: 50%; /* Bordes redondeados */
+  cursor: pointer;
+  /*box-shadow: -407px 0 0 400px #FE02A6;*/
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #FFEDF9; /* Rosa claro */
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Coloca el globo arriba del texto */
+  left: 50%;
+  margin-left: -150px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Flecha apuntando hacia el texto */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #FFEDF9 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.content {
+  padding: 20px;
+}
+
+footer {
+  background-color: #FFEDF9;
+  color: #FE02A6;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+
+.footer-left {
+  padding-right: 20px;
+}
+
+.footer-right {
+  padding-left: 20px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+  color: #FE02A6;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.footer-info {
+  margin-bottom: 20px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links ul li {
+  margin: 0 10px;
+}
+
+.footer-links ul li a {
+  color: #FE02A6;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+
+.red-social {
+  margin: 0 10px;
+}
+
+.red-social img {
+  width: 40px; /* Tamaño deseado para los logos de redes sociales */
+  height: 40px; /* Tamaño deseado para los logos de redes sociales */
+}

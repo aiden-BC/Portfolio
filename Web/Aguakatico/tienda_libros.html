@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - libros</title>
+    <link rel="stylesheet" href="css/tienda.css">
+    <script src="js/tienda.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <img id="logo" src="imgs/Aguacatiko.png" width="350" height="150">
+    </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <ul>
+            <li><a href="pag_principal.html">INICIO</a></li>
+            <li class="dropdown">
+                <a href="tienda.html" class="dropbtn">TIENDA</a>
+                <div class="dropdown-content">
+                    <a href="tienda_libros.html">Libros</a>
+                    <a href="tienda_utensilios.html">Utensilios</a>
+                    <a href="tienda_ingredientes.html">Ingredientes</a>
+                </div>
+            </li>
+            <li><a href="enviar_receta.html">ENVÍO DE RECETAS</a></li>
+            <li><a href="suscripcion.html">SUSCRIPCIÓN</a></li>
+            <li><a href="conocenos.html"><u>Conócenos</u></a></li>
+        </ul>
+    </nav><br>
+
+    <!-- ASIDE -->
+    <aside class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="carroTitulo">
+            <h3>CARRITO DE COMPRA</h3>
+            <img src="imgs/tienda/carrito.png" height="40" width="40">
+        </div>
+        
+        <div id="carro">
+            <p id="desaparece">Arrastre los productos aquí</p>
+            <ul id="carrito">
+
+            </ul>
+        </div>
+        <p>Total: <span id="total">0.00</span>€</p>
+        <button onclick="comprar()">Comprar</button>
+        <button onclick="vaciar()">Vaciar carro</button>
+    </aside>
+
+    <!-- LIBROS -->
+    <h3>LIBROS DE RECETAS</h3>
+    <section id="libros">
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <div id="pie">
+                <img id="logo" src="imgs/Aguacatiko.png" width="230" height="100">
+            </div>
+            <div>
+                <p><a href="https://www.iubenda.com/es/help/37616-que-son-los-terminos-y-condiciones-y-para-que-sirven#:~:text=Las%20Condiciones%20de%20servicio%20establecen,para%20protegerlo%20de%20posibles%20responsabilidades."><small>Condiciones de Servicio | Privacidad | Política de Contenidos</small></a></p>
+            </div>
+        </div>
+        <div>
+            <h5>CONTACTO</h5>
+
+            <ul>
+                <li type="point">Correo: <a href="https://www.google.com/intl/es/gmail/about/">aguacatiko@gmail.com</a></li>
+                <li type="point">Teléfono: +34 111 222 333</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

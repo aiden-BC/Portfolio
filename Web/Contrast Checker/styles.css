@@ -19,13 +19,38 @@ header{
 }
 
 .izq{
-    display: block;
+    float: left;
     width: 45%;
 }
 
 .der{
-    display: block;
+    float: left;
     width: 45%;
+}
+
+@media (max-width: 768px) {
+    .contenedor-general {
+        flex-direction: column; /* Apilar los elementos en columna */
+        align-items: center; /* Centrar el contenido */
+        gap: 20px; /* Espacio entre los elementos */
+    }
+
+    .izq, .der {
+        width: 90%; /* Ocupar más ancho en pantallas pequeñas */
+        float: none; /* Evitar flotado */
+    }
+
+    body {
+        font-size: 12; /* Tamaño más grande en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 650px){
+    .contenedor-in {
+        flex-direction: column; /* Apilar los elementos en columna */
+        align-items: center; /* Centrar el contenido */
+        gap: 20px; /* Espacio entre los elementos */
+    } 
 }
 
 .contenedor-general{
@@ -76,12 +101,17 @@ header{
 
 .contenedor-in{
     display: flex;
-    justify-content: space-between; /* Distribuir elementos de manera uniforme */
     width: 95%;
     height: auto;
     padding-left: 20px; /* Espaciado interno */
     border-radius: 30px; /* Radio de las esquinas redondeadas */
     align-items: center;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
 }
 
 .cajaRatio{
@@ -100,16 +130,20 @@ header{
     flex-direction: column;
 }
 
-.input{
+.input {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    justify-content: space-between;
     background-color: #FFFFFC; /* Fondo */
     border-radius: 20px; /* Radio de las esquinas redondeadas */
-    padding: 10px; /* Espaciado interno */
-    height: 40%;
-    width: 25%;
-    margin-left: 3%;
+    padding: 1%; /* Espaciado interno */
+    height: auto; /* Altura automática */
+    width: 35%; /* Ancho automático */
+    margin-left: 0; /* Eliminar margen izquierdo */
+}
+
+#colorInput{
+    width: 60%;
 }
 
 .img-input{
@@ -180,18 +214,18 @@ header{
     filter: invert(100%);
 }
 
-#boton-eliminar-todo:active{
+#boton-eliminar-todo:active, #boton-eliminar-img:active {
     background-color: #FFFFFC; /* Color de fondo del botón */
     color: #E40101;
 }
 
-input[type="text"]{
+input[type="text"] {
     background: #FFFFFC;
     border: none;
-    border-radius: 30px; /* Radio de las esquinas redondeadas */
     font-size: medium;
-    width: 50%;
+    width: 40%; /* Ancho automático */
     height: 100%;
+    margin-right: 0px; /* Espacio entre el input de texto y el círculo */
 }
 
 #textInput{

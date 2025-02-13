@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="imagenes/logo_header.png" class="logo" height="100">
+        <img src="imagenes/logo_header.png" class="logo" style="max-width:100%;max-height:100%;">
         <hr class="linea">
     </header>
     <div class="contenedor-general">
@@ -21,22 +21,26 @@
                     <div class="input">
                         <input type="text" class="texto" id="colorInput" value="#5271FF" autocomplete="off">
                         <div class="circle" id="circle"></div>
-                    </div>      
-                    
-                    <div class="boton">
-                        <button id="cuentagotas">
-                            <input style="border: none;width: 1px;height: 1px;visibility: hidden;"autocomplete="off">
-                            <img src="imagenes/colorpicker.png">
-                            <input type="color" id="boton-colorpicker" value="#5271FF" style="border: none;width: 1px;height: 1px;visibility: hidden;"autocomplete="off">
-                        </button>
                     </div>
                     
-                    <div class="boton">
-                        <button id="boton-add">+</button>
+                    <div class="botones">
+                        <div class="boton">
+                            <button id="cuentagotas">
+                                <input style="border: none;width: 1px;height: 1px;visibility: hidden;"autocomplete="off">
+                                <img src="imagenes/colorpicker.png">
+                                <input type="color" id="boton-colorpicker" value="#5271FF" style="border: none;width: 1px;height: 1px;visibility: hidden;"autocomplete="off">
+                            </button>
+                        </div>
+                        
+                        <div class="boton">
+                            <button id="boton-add">+</button>
+                        </div>
+                        <div class="boton">
+                            <button id="boton-aceptar">Aceptar</button>
+                        </div>
                     </div>
-                    <div class="boton">
-                        <button id="boton-aceptar">Aceptar</button>
-                    </div>
+                    
+                    
                 </div>
                 <div id="paleta"></div>
                 <div class="contenedor-in" style="margin-top: 10px;">
